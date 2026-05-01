@@ -1,0 +1,53 @@
+.form-card {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 28px;
+  border-radius: var(--radius);
+  border: 1px solid var(--panel-border);
+  background: var(--panel);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow);
+}
+
+.back {
+  text-decoration: none;
+  color: #93c5fd;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+}
+
+input,
+textarea {
+  padding: 13px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  outline: none;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgba(124, 58, 237, 0.8);
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.15);
+}
+
+button {
+  width: fit-content;
+  padding: 13px 18px;
+  border: 0;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--primary), #2563eb);
+  color: white;
+  font-weight: 700;
+}

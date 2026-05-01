@@ -1,0 +1,26 @@
+<section class="card">
+  <div class="card__header">
+    <h2>Login</h2>
+    <p>Accede a la zona privada de prueba.</p>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="submit()" class="form">
+    <label>
+      <span>Email</span>
+      <input type="email" formControlName="email" placeholder="lucia@email.com" />
+    </label>
+    @if (form.controls.email.touched && form.controls.email.invalid) {
+      <small>Introduce un email válido.</small>
+    }
+
+    <label>
+      <span>Password</span>
+      <input type="password" formControlName="password" placeholder="••••••••" />
+    </label>
+    @if (form.controls.password.touched && form.controls.password.invalid) {
+      <small>La contraseña debe tener al menos 6 caracteres.</small>
+    }
+
+    <button type="submit" [disabled]="form.invalid">Entrar</button>
+  </form>
+</section>

@@ -1,0 +1,24 @@
+<section class="page">
+  <div class="page__header">
+    <div>
+      <h2>Tasks</h2>
+      <p>Lista de tareas con aspecto de app real.</p>
+    </div>
+    <a routerLink="/tasks/new" class="btn">+ Nueva tarea</a>
+  </div>
+
+  <div class="list">
+    @for (task of tasks; track task.id) {
+      <article class="task" [class.done]="task.status === 'done'">
+        <div>
+          <h3>{{ task.title }}</h3>
+          <p>{{ task.description }}</p>
+        </div>
+        <div class="meta">
+          <span>{{ task.status }}</span>
+          <a [routerLink]="['/tasks', task.id]">Ver detalle</a>
+        </div>
+      </article>
+    }
+  </div>
+</section>
